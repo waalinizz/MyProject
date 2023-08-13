@@ -1,0 +1,29 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.SocialMediaModel.SocialMediaUpdateViewModel
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-controller="SocialMedias" asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">#</label>
+        <input type="text" class="form-control" asp-for="SocialMedia.SocialMediaId">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Sosyal Medya Plartform Adı</label>
+        <input type="text" class="form-control" asp-for="SocialMedia.SocialMediaName">
+    </div>
+    <div class="form-group">
+        <label for="number">Sosyal Medya URL</label>
+        <input type="text" class="form-control" asp-for="SocialMedia.Address">
+    </div>
+    <div class="form-group">
+        <label for="number">Sosyal Medya İkonu Html</label>
+        <input type="text" class="form-control" asp-for="SocialMedia.Icon">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+
+

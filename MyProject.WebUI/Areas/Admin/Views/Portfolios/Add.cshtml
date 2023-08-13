@@ -1,0 +1,17 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.PortfolioModel.PortfolioAddViewModel
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-controller="Portfolios" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Portfolyö Adı</label>
+        <input type="text" class="form-control" asp-for="Portfolio.PortfolioName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Portfolyö Linki</label>
+        <input type="text" class="form-control" asp-for="Portfolio.PortfolioLink">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.PortfolioModel.PortfolioUpdateViewModel
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-controller="Portfolios" asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">#</label>
+        <input type="text" class="form-control" asp-for="Portfolio.PortfolioId">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Portfolyö Adı</label>
+        <input type="text" class="form-control" asp-for="Portfolio.PortfolioName">
+    </div>
+    <div class="form-group">
+        <label for="number">Link Url</label>
+        <input type="text" class="form-control" asp-for="Portfolio.PortfolioLink">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+
+
+

@@ -1,0 +1,29 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.ExperienceTwoModel.ExperienceTwoAddViewModel
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form asp-controller="ExperienceTwos" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Başlık</label>
+        <input type="text" class="form-control" asp-for="ExperienceTwo.Title">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Açıklama</label>
+        <input type="text" class="form-control" asp-for="ExperienceTwo.Description">
+    </div>
+
+    <div class="form-group">
+        <label for="number">Tarih</label>
+        <input type="text" class="form-control" asp-for="ExperienceTwo.Date">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Alt Başlık</label>
+        <input type="text" class="form-control" asp-for="ExperienceTwo.Subtitle">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+

@@ -1,0 +1,24 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.ContactModel.ContactUpdateViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<form asp-controller="Contacts" asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">#</label>
+        <input type="text" class="form-control" asp-for="Contact.ContactId">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Başlık</label>
+        <input type="text" class="form-control" asp-for="Contact.Title">
+    </div>
+    <div class="form-group">
+        <label for="number">Alt Başlık (Açıklama)</label>
+        <textarea style="word-wrap; height:200px" class="form-control" asp-for="Contact.Subtitle"></textarea>
+        @*<input type="text" class="form-control" asp-for="Contact.Subtitle">*@
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+
+

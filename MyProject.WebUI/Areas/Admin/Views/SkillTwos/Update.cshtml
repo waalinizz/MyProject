@@ -1,0 +1,23 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.SkillTwoModel.SkillTwoUpdateViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-controller="SkillTwos" asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">#</label>
+        <input type="text" class="form-control" asp-for="SkillTwo.SkillTwoId">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Yetenek</label>
+        <input type="text" class="form-control" asp-for="SkillTwo.SkillItem">
+    </div>
+    <div class="form-group">
+        <label for="number">Yetenek Yüzdesi</label>
+        <input type="text" class="form-control" asp-for="SkillTwo.SkillItemPercent">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+

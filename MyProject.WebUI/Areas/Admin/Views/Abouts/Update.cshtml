@@ -1,0 +1,50 @@
+﻿@model MyProject.WebUI.Areas.Admin.Models.AboutModel.AboutUpdateViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-controller="Abouts" asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">#</label>
+        <input type="text" class="form-control" asp-for="About.AboutId">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ad</label>
+        <input type="text" class="form-control" asp-for="About.FirstName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Soyad</label>
+        <input type="text" class="form-control" asp-for="About.LastName">
+    </div>
+    <div class="form-group">
+        <label for="number">Açıklama</label>
+        <textarea class="form-control" asp-for="About.Description" style="height:200px; word-wrap;"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Yaş</label>
+        <input type="text" class="form-control" asp-for="About.Age">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Mail</label>
+        <input type="text" class="form-control" asp-for="About.FirstEmail">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">İkinci Mail</label>
+        <input type="text" class="form-control" asp-for="About.SecondEmail">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Telefon</label>
+        <input type="text" class="form-control" asp-for="About.Phone">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Adres</label>
+        <input type="text" class="form-control" asp-for="About.Address">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Yazılım Alanı</label>
+        <input type="text" class="form-control" asp-for="About.SoftwareArea">
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
